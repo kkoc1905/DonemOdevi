@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FFragment">
+    <fragment
+        android:id="@+id/FFragment"
+        android:name="com.example.donemodevi.ListFragment"
+        android:label="f_fragment"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_FFragment_to_SFragment"
+            app:destination="@id/SFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SFragment"
+        android:name="com.example.donemodevi.DEFragment"
+        android:label="s_fragment_l"
+        tools:layout="@layout/fragment_detay">
+        <action
+            android:id="@+id/action_SFragment_to_FFragment"
+            app:destination="@id/FFragment" />
+    </fragment>
+</navigation>
